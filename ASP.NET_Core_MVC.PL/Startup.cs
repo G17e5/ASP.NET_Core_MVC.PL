@@ -32,7 +32,7 @@ namespace ASP.NET_Core_MVC.PL
 
             services.AddDbContext<ApplicationDbContext>(options =>
             {
-                options.UseSqlServer("Server = .; Database = MVC_Project ; Trusted_Connetcion = Ture");
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
 
         }
